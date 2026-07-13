@@ -21,7 +21,7 @@ export default function Hero({ onSearch }) {
   return (
     <div className="Main-box-Hero">
       <div className="box-Logo">
-        <img src="/Imag/Logo.jpg" alt="شعار" />
+        <img src="/Imag/Logo.jpg" alt="شعار" loading="lazy" />
       </div>
       <div className="box-title">
         <h3>ChickenHut</h3>

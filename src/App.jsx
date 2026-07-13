@@ -1,29 +1,20 @@
 // import { useState, useEffect } from "react";
-// import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 // import axios from "axios";
 // import "./App.css";
 // import Hero from "./pages/hero/Hero";
 // import CategoriesBar from "./Component/categoriesBar/CategoriesBar";
 // import MenuItemsSection from "./Component/menuItemsSection/MenuItemsSection";
-// import { CartProvider, useCart } from "./context/CartContext";
-// import CartIcon from "./Component/cart/CartIcon";
-// import CartSidebar from "./Component/cart/CartSidebar";
-// import CheckoutModal from "./Component/cart/CheckoutModal";
-// import TrackOrderModal from "./Component/cart/TrackOrderModal";
-// import TrackOrderIcon from "./Component/cart/TrackOrderIcon";
-// import SizeSelectorPage from "./Component/cart/SizeSelectorPage"; // ✅ سننشئه
 
 // // سكيلتون لودرز
 // import CategoriesBarSkeleton from "./Component/categoriesBar/CategoriesBarSkeleton";
 // import MenuItemsSectionSkeleton from "./Component/menuItemsSection/MenuItemsSectionSkeleton";
 
-// function MainLayout() {
+// function App() {
 //   const [categories, setCategories] = useState([]);
 //   const [items, setItems] = useState([]);
 //   const [selectedCategory, setSelectedCategory] = useState(null);
 //   const [loading, setLoading] = useState(true);
 //   const [searchQuery, setSearchQuery] = useState("");
-//   const { addToCart } = useCart(); // ✅ نحتاجه لتمريره للمودال
 
 //   useEffect(() => {
 //     const fetchData = async () => {
@@ -51,8 +42,6 @@
 //   return (
 //     <>
 //       <Hero onSearch={handleSearch} />
-//       <CartIcon />
-//       <TrackOrderIcon />
 
 //       {loading ? (
 //         <>
@@ -78,38 +67,20 @@
 //           />
 //         </>
 //       )}
-//       {/* ✅ نمرر items و addToCart إلى المسارات الفرعية */}
-//       <Outlet context={{ items, addToCart }} />
 //     </>
-//   );
-// }
-
-// function App() {
-//   return (
-//     <CartProvider>
-//       <BrowserRouter>
-//         <Routes>
-//           <Route path="/" element={<MainLayout />}>
-//             <Route path="cart" element={<CartSidebar />} />
-//             <Route path="cart/checkout" element={<CheckoutModal />} />
-//             <Route path="track-order" element={<TrackOrderModal />} />
-//             {/* ✅ مسار اختيار الحجم الجديد */}
-//             <Route path="select-size/:itemId" element={<SizeSelectorPage />} />
-//           </Route>
-//         </Routes>
-//       </BrowserRouter>
-//     </CartProvider>
 //   );
 // }
 
 // export default App;
 
 import { useState, useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async"; // ✅ جديد
 import axios from "axios";
 import "./App.css";
 import Hero from "./pages/hero/Hero";
 import CategoriesBar from "./Component/categoriesBar/CategoriesBar";
 import MenuItemsSection from "./Component/menuItemsSection/MenuItemsSection";
+import SEOMeta from "./Component/SEOMeta"; // ✅ جديد
 
 // سكيلتون لودرز
 import CategoriesBarSkeleton from "./Component/categoriesBar/CategoriesBarSkeleton";
@@ -146,9 +117,11 @@ function App() {
   const handleSearch = (query) => setSearchQuery(query);
 
   return (
-    <>
+    <HelmetProvider>
+      {" "}
+      {/* ✅ تغليف التطبيق */}
+      <SEOMeta /> {/* ✅ مكون SEO */}
       <Hero onSearch={handleSearch} />
-
       {loading ? (
         <>
           <div className="Box">
@@ -173,7 +146,7 @@ function App() {
           />
         </>
       )}
-    </>
+    </HelmetProvider>
   );
 }
 
