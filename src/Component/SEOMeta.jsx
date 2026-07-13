@@ -20,13 +20,13 @@ export default function SEOMeta({
             image: image,
             address: {
               "@type": "PostalAddress",
-              streetAddress: "شارع الحمرا, مقابل فندق الشام",
+              streetAddress: "ساحة باب توما, القيمرية",
               addressLocality: "دمشق",
               addressCountry: "SY"
             },
             servesCuisine: "دجاج, سوري, عالمي",
             priceRange: "$",
-            telephone: "0096311XXXXXXX",
+            telephone: "00963938991726",
             menu: url,
             acceptsReservations: "True"
           })}
