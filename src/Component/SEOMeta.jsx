@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 export default function SEOMeta({
-  title = "ChickenHut | منيو إلكتروني | ألذ دجاج في دمشق",
+  title = "ChickenHut | ألذ دجاج في دمشق",
   description = "منيو مطعم ChickenHut في دمشق. ألذ أطباق الدجاج المقلي والمشوي والبرجر مع أسعار وصور. اطلب الآن أو زورونا في سوريا",
   keywords = "chickenhut, تشكين هت, مطعم دجاج, منيو دجاج, مطاعم دمشق, مطاعم سوريا, دجاج مقلي, برجر دجاج, شاورما دجاج, أكل سوري, chicken damascus syria restaurant",
   image = "/Imag/Logo.jpg", // غيّره لرابط شعارك الحقيقي
