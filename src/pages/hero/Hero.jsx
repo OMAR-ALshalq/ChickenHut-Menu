@@ -28,19 +28,44 @@ export default function Hero({ onSearch }) {
         <p>مختصون بتقديم شاورما الدجاج و اللحم بحرفية عالية</p>
       </div>
       <div className="box-SocialMedia">
-        <a href="">
+        {/* فيسبوك */}
+        <a
+          href="https://www.facebook.com/share/1DDJeerbsP/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaFacebook className="Icon-SocialMedia" />
         </a>
-        <a href="">
+
+        {/* واتساب */}
+        <a
+          href="https://wa.me/963938991726"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <MdWhatsapp className="Icon-SocialMedia" />
         </a>
-        <a href="">
+
+        {/* إنستغرام */}
+        <a
+          href="https://www.instagram.com/chicken_hut11?igsh=eGU1bzQ5bXU2cGtm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillInstagram className="Icon-SocialMedia" />
         </a>
-        <a href="">
+
+        {/* الموقع (Google Maps) */}
+        <a
+          href="https://maps.app.goo.gl/65UwtjQ3ZdA6heMLA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLocationDot className="Icon-SocialMedia" />
         </a>
-        <a href="">
+
+        {/* اتصال هاتفي */}
+        <a href="tel:+963938991726">
           <IoCall className="Icon-SocialMedia" />
         </a>
       </div>
