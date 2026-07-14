@@ -64,7 +64,6 @@ export default function Hero({ onSearch }) {
           <FaLocationDot className="Icon-SocialMedia" />
         </a>
 
-        {/* اتصال هاتفي */}
         <a href="tel:+963938991726">
           <IoCall className="Icon-SocialMedia" />
         </a>
