@@ -3,7 +3,7 @@ import "./Hero.css";
 
 // icons ...
 import { MdWhatsapp } from "react-icons/md";
-// import { FaFacebook } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
@@ -34,7 +34,7 @@ export default function Hero({ onSearch }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {/* <FaFacebook className="Icon-SocialMedia" /> */}
+          <FaFacebook className="Icon-SocialMedia" />
         </a>
 
         {/* واتساب */}
